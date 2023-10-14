@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Check {
-    public static void checkForBrackets(String string){
+    /** Метод ищет парные знаки и знаки, которых не должно быть в выражении */
+    public static void areBadSigns(String string){
         for( int i = 0; i < string.length() -1; i++){
             if(Symbols.isOk(string.charAt(i),string.charAt(i+1)))
                 throw new RuntimeException("BAD SYNTAX!");
         }
-        System.out.println("Все ок!");
     }
-    public static List<String> getVariables(String string){
+    public static List<String> areVariables(String string){
         List<String> listOFVariables = new ArrayList<>();
         String variable;
 

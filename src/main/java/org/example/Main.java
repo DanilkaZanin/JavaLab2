@@ -1,22 +1,28 @@
 package org.example;
 
 import org.example.check.Check;
+import org.example.сontroller.IOController;
 
 import java.util.List;
 import java.util.Scanner;
 
+import static org.example.check.Check.areVariables;
+import static org.example.сontroller.IOController.setVariables;
+
 public class Main {
     public static void main(String[] args) {
-        // сначала сделать проверку на два знака рядом и скобки
-        // просмотреть, есть ли переменные, если есть, то запросить значения у пользователя и подставить
+        // нужно разбить строку на токены
+
+
+
         //логично наверное сначала выполнять все операции в скобках
         //для этого сделаем рекурсивную функцию, которая разбивает строку на несколько подстрок и будем вычислять значения внутри
 
-        String str = "asd!f";
+        List<String> str = areVariables("a+b*2");
 
-        List<String> list = Check.getVariables(str);
-
-        list.forEach(System.out::println);
+        String str1 = setVariables("a+b*2",str);
+        System.out.println("ВОТ ОНО");
+        System.out.println(str1);
     }
 
 }

@@ -1,27 +1,15 @@
 package org.example.сontroller;
 
-import org.example.entity.Part;
-
-import java.util.LinkedList;
+import org.example.check.Check;
+import java.util.List;
 
 public class MainController {
+    public MainController(String expression){
 
-    public void separateExpression(String string){
-        LinkedList<Part> list = new LinkedList<>();
+        Check.areBadSigns(expression);
+        List<String> signs = Check.areVariables(expression);
 
-        for(int i = 0; i < string.length(); i++){
-
-            if(Character.isDigit(string.charAt(i))){
-
-                String str = String.valueOf(string.charAt(i));
-                int j = i +1;
-
-                while(Character.isDigit(string.charAt(j))){
-                    str += String.valueOf(string.charAt(i));
-                    j++;
-                }
-                list.add(new Part(str));
-            }
-        }
+        IOController.setVariables(expression, signs);
+        //дописать и алгоритм решения
     }
 }

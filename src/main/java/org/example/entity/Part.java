@@ -1,4 +1,4 @@
-package org.example;
+package org.example.entity;
 /**Объект класса Part будет содержать в себе так называемую часть выражения */
 public class Part {
 
@@ -10,6 +10,12 @@ public class Part {
         part = null;
         sign = ' ';
         expression = null;
+    }
+
+    public Part(String string){
+        part = null;
+        sign = ' ';
+        expression = string;
     }
 
     public Part getPart() {
@@ -35,5 +41,4 @@ public class Part {
     public void setExpression(String expression) {
         this.expression = expression;
     }
-
 }

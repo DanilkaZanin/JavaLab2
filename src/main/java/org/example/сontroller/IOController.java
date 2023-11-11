@@ -6,6 +6,13 @@ import org.example.input.Input;
 import java.util.List;
 
 public class IOController {
+    /**
+     * Вставляет значения переменных в выражение
+     *
+     * @param equation выражение
+     * @param signs список переменных
+     * @return изменённое выражение
+     */
     public static String setVariables(String equation, List<String> signs){
         List<Pair<String,Integer>> listOfPairs = Input.askUserForVariables(signs);
 

@@ -7,12 +7,13 @@ import java.util.stream.Stream;
 
 public class Symbols {
 
-    private static final List<Character> SYMBOLS = Arrays.asList('-','+','=');
+    private static final List<Character> SYMBOLS = Arrays.asList('-','+','=','*','/');
     private static final char OPENED_BRACKET ='(';
     private static final char CLOSED_BRACKET = ')';
     //Список запрещенных символов по индексам
-    private static final List<? extends Serializable> BAD_SYMBOLS = Arrays
-            .asList(33,34,35,36,37,38,39,44,46,47,58,59,60,61,62,63,64,91,92,93,94,95,96,123,124,125,126);
+    private static final List<? extends Serializable> BAD_SYMBOLS = Arrays.
+            asList('!', '"', '#', '$', '%', '&', '\'', ',', '.', '/', ':', ';', '<', '=', '>', '?', '@',
+                    '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~');
 
     //метод проверят два символа на повторение
     public static boolean isOk(char symbol1,char symbol2){

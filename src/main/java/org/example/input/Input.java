@@ -7,6 +7,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Input {
+    /**
+     * Запрашивает значения переменных у пользователя
+     *
+     * @param variables список переменных
+     * @return список пар <переменная, значение>
+     */
     public static List<Pair<String, Integer>> askUserForVariables(List<String> variables){
         List<Pair<String,Integer>> list = new ArrayList<>();
 

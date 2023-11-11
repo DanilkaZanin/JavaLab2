@@ -24,9 +24,9 @@ public class Symbols {
         else if(SYMBOLS.stream().anyMatch(e -> e.equals(symbol1))){
             Stream<Character> concatedStream = Stream.concat(SYMBOLS.stream(),Stream.of(OPENED_BRACKET,CLOSED_BRACKET));
             return concatedStream.noneMatch(e -> e.equals(symbol2));
-        } else if (symbol1 == OPENED_BRACKET && symbol2 == OPENED_BRACKET) {
+        } else if (symbol1 == OPENED_BRACKET && symbol2 == CLOSED_BRACKET) {
             return false;
-        } else if (symbol1 == CLOSED_BRACKET && symbol2 == CLOSED_BRACKET){
+        } else if (symbol1 == CLOSED_BRACKET && symbol2 == OPENED_BRACKET){
             return false;
         }
         return true;
